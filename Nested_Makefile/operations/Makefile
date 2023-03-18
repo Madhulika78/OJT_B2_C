@@ -1,0 +1,21 @@
+all:app2
+
+app2:app2.c add.o sub.o mul.o div.o mod.o Arith.h
+	gcc app2.c add.c sub.c mul.c div.c mod.c -o app2 
+
+add.o:add.c
+	gcc -c add.c -o add.o
+
+sub.o:sub.c
+	gcc -c sub.c -o sub.o
+
+mul.o:mul.c
+	gcc -c mul.c -o mul.o
+
+div.o:div.c
+	gcc -c div.c -o div.o
+
+mod.o:mod.c
+	gcc -c mod.c -o mod.o
+clean:
+	rm *.o
